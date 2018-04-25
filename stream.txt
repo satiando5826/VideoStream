@@ -1,0 +1,8 @@
+Stream
+ffmpeg.exe -re -i test.mp4 -r 30 -s 1280x720 -c:v libx264 -preset medium -crf 23 -f rtsp -rtsp_transport tcp rtsp://localhost:554/live
+
+Get Stream Record and Stream to youtube
+ffmpeg.exe -rtsp_flags listen -i rtsp://localhost:554/live -r 30 -s 1280x720 -c:v libx264 -preset medium -crf 23 -f flv out.mp4 out1.mp4
+
+youtube url
+rtmp://a.rtmp.youtube.com/live2/5ux8-gxs4-g3dq-453k
